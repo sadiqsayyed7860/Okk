@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Movie Explorer</h1>
+        <button id="toggle-mode" class="dark-light-toggle">🌙</button>
+    </header>
+
+    <div class="filters">
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Search for movies...">
+            <button id="search-icon" class="search-button">🔍</button>
+        </div>
+        <select id="genre">
+            <option value="">Select Genre</option>
+        </select>
+        <select id="year">
+            <option value="">Select Year</option>
+        </select>
+        <select id="sort">
+            <option value="">Sort By</option>
+            <option value="release_asc">Oldest Release</option>
+            <option value="release_desc">Latest Release</option>
+            <option value="rating_high">Highest Rating</option>
+            <option value="rating_low">Lowest Rating</option>
+        </select>
+    </div>
+
+    <div class="movie-links">
+        <a href="https://m.imdb.com/trailers/" target="_blank" class="watch-trailer">🎬 Watch Trailers</a>
+        <a href="https://himovies.sx/" target="_blank" class="stream-movies">🍿 Stream Movies</a>
+    </div>
+
+    <main id="main"></main>
+
+    <footer>
+        <h2>Leave a Comment</h2>
+        <form id="comment-form">
+            <input type="text" id="user-name" placeholder="Your Name" required>
+            <textarea id="comment" placeholder="Your Comment" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="comment-message"></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
